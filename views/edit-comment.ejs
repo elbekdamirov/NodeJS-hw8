@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h3>Edit information about Comment</h3>
+
+    <form
+      action="/edit_comment/<%= comment.id %>?_method=PUT"
+      method="post"
+      id="edit-form"
+    >
+      <label for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        value="<%= comment.name %>"
+      /><br /><br />
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        value="<%= comment.email %>"
+      /><br /><br />
+
+      <label for="Body">Body</label>
+      <input
+        type="text"
+        name="body"
+        id="body"
+        value="<%= comment.body %>"
+      /><br /><br />
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>

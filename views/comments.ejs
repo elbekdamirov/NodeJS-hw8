@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h1>Comments</h1>
+    <ol>
+      <% comments.forEach((comment) => { %>
+      <li>
+        <a href="/comment/<%= comment.id %>"> 
+          <%= comment.name %> - <%= comment.email %> 
+        </a>
+      </li>
+      <% }) %>
+    </ol>
+    <h2><a href="/add-comment">Add new Comment</a></h2>
+  </body>
+</html>
