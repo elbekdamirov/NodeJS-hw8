@@ -27,6 +27,8 @@ app.use((req, res) => {
   res.render(createViewPage("404"), { title: "404" });
 });
 
+console.log("hello");
+
 app.listen(PORT, () => {
   console.log(`Server started at: http://localhost:${PORT}`);
 });
